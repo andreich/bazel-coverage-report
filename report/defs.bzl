@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 """Coverage report generation."""
 
 _LCOV_BUILD_FILE_CONTENT = """
@@ -20,7 +21,7 @@ filegroup(
     visibility = ["//visibility:public"],
 )
 """
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+
 def bazel_coverage_report_repositories():
   """Add to the WORKSPACE external dependencies needed by the generator.
   """
