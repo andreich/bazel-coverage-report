@@ -63,7 +63,7 @@ def _get_go_importmap(project_dir, workspace_name):
       [
           'bazel',
           'query',
-          'kind(_gazelle_runner, //:*)',
+          'kind(bazel_gazelle, //:*)',
           '--output=xml',
       ],
       cwd=project_dir)
